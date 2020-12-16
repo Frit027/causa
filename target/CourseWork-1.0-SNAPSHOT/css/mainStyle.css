@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap'); /*кнопки*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); /*текст*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap'); /*popup*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap'); /*menu*/
+
+body {
+    background: #F5FFFA;
+}
+
+.mainButton {
+    position: relative;
+    display: inline-block;
+    left: 43%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    outline: none;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 1.1em 1.5em;
+    background: #FAEBD7;
+    border: 2px solid #828580;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.mainButton::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #E1C6A3;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #828580, 0 0.625em 0 0 #F9EFE1;
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.mainButton:hover {
+    background: #FAEBD7;
+    transform: translate(0, 0.25em);
+}
+.mainButton:hover::before {
+    box-shadow: 0 0 0 2px #828580, 0 0.5em 0 0 #F9EFE1;
+    transform: translate3d(0, 0.5em, -1em);
+}
+.mainButton:active {
+    background: #FAEBD7;
+    transform: translate(0em, 0.75em);
+}
+.mainButton:active::before {
+    box-shadow: 0 0 0 2px #828580, 0 0 #F9EFE1;
+    transform: translate3d(0, 0, -1em);
+}
+
+.usualButton {
+    position: relative;
+    background-color: #F5F5F5;
+    border: 2px solid #708090;
+    border-radius: 7px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 5px 7px;
+    text-align: center;
+    color: #3D2B1F;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.usualButton:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+.usualButton:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+    background-color: #A0A0A4;
+}
+.usualButton:focus {
+    outline: none;
+}
+
+.radio {
+    margin: 16px 0;
+    display: block;
+    cursor: pointer;
+}
+.radio input {
+    display: none;
+}
+.radio input + span {
+    line-height: 22px;
+    height: 22px;
+    padding-left: 22px;
+    display: block;
+    position: relative;
+}
+.radio input + span:not(:empty) {
+    padding-left: 30px;
+}
+.radio input + span:before, .radio input + span:after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    display: block;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.radio input + span:before {
+    background: #D1D7E3;
+    transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+.radio input + span:after {
+    background: #fff;
+    transform: scale(0.78);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+}
+.radio input:checked + span:before {
+    transform: scale(1.04);
+    background: #9F8170;
+}
+.radio input:checked + span:after {
+    transform: scale(0.4);
+    transition: transform 0.3s ease;
+}
+.radio:hover input + span:before {
+    transform: scale(0.92);
+}
+.radio:hover input + span:after {
+    transform: scale(0.74);
+}
+.radio:hover input:checked + span:after {
+    transform: scale(0.4);
+}
+
+[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat;
+}
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+.nameInDialog {
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    margin-right: 7px;
+}
+
+dialog {
+    border-radius: 10px;
+    border: 3px solid #A0A0A4;
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.title_dialog {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #26252D;
+}
+
+.group {
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.input_dialog {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:280px;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+.input_dialog:focus {
+    outline:none;
+}
+.label_dialog {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+.input_dialog:focus ~ .label_dialog, .input_dialog:valid ~ .label_dialog {
+    top:-20px;
+    font-size:14px;
+    color:#007FFF;
+}
+.bar {
+    position:relative;
+    display:block;
+    width:300px;
+}
+.bar:before, .bar:after	{
+    content:'';
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background:#007FFF;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%;
+}
+.input_dialog:focus ~ .bar:before,
+.input_dialog:focus ~ .bar:after {
+    width:50%;
+}
+.highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+.input_dialog:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+@-webkit-keyframes inputHighlighter {
+    from { background:#007FFF; }
+    to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#007FFF; }
+    to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#007FFF; }
+    to 	{ width:0; background:transparent; }
+}
+
+.usualMenu {
+    margin-top: 30px;
+    background: #FFFFF0;
+    float: left;
+    padding: 8px 40px 8px 2px;
+    border: 1px solid black;
+}
+.usualMenu a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #003153;
+    display: block;
+}
+.usualMenu a:hover {
+    text-decoration: underline;
+}
+
+.tableFired {
+    max-width: 1150px;
+    margin-top: 30px;
+}
+
+.buttons {
+    float: right;
+}
+
+.nameEmployee {
+    text-decoration: none;
+    color: #FFFFF0;
+    text-shadow: black 0 0 1px;
+}
+.nameEmployee:hover {
+    text-decoration: underline;
+    color: #4E5452;
+}

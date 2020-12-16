@@ -1,0 +1,64 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    border-radius: 5px;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    width: 400px;
+    background: #FFFFF0;
+}
+.card {
+    height: 55px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.container {
+    padding: 12px 16px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 27px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.taskInProgress {
+    color: #007FFF;
+    margin-bottom: 5px;
+}
+
+.taskExpired {
+    color: #EF3038;
+    margin-bottom: 5px;
+}
+
+.count {
+    opacity: 0.5;
+    font-size: 24px;
+}
+
+.person {
+    margin-bottom: 10px;
+}
+
+.name {
+    margin-bottom: 3px;
+}
+
+.position {
+    font-size: 18px;
+    color: #7FB5B5;
+    margin-bottom: 2px;
+}
+
+.when {
+    font-size: 17px;
+    color: #4E5452;
+}
+
+.birthday {
+    color: #2271B3;
+}
